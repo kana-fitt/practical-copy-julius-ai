@@ -11,25 +11,27 @@
     font-size: 17px;
   }
 
+  /* Hide the original tabcontent in the tab area */
   .tabcontent {
     display: none;
-    padding: 12px;
   }
 
-  .tabcontent.active {
-    display: block;
+  /* New Section style */
+  #activeTabSection {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
   }
 }
 
 /* Style for Mobile (screen widths smaller than 960px) */
 @media screen and (max-width: 960px) {
-  /* Stack the buttons vertically */
   .tab {
     display: block;
   }
 
+  /* Stack the buttons vertically */
   .tab button {
-    pointer-events: none;
     display: block;
     width: 100%;
     padding: 10px;
@@ -38,7 +40,7 @@
     border-bottom: 1px solid #ccc;
   }
 
-  /* Display all tab content in sequence */
+  /* Show tab content after each tab button */
   .tabcontent {
     display: block;
     padding: 12px;
@@ -46,5 +48,10 @@
     border: 1px solid #ccc;
     border-top: none;
     margin-bottom: 10px;
+  }
+
+  /* Hide the new section for mobile */
+  #activeTabSection {
+    display: none;
   }
 }

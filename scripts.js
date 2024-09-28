@@ -1,29 +1,33 @@
 function openTab(evt, tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+  if (window.innerWidth >= 960) {
+    // Allow tab switching only for screens wider than 960px
+    var i, tabcontent, tablinks, activeTabContent;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    // Hide all tab content in the tab section (already hidden by default in CSS)
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Remove the active class from all buttons
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Add active class to the clicked button
+    evt.currentTarget.className += " active";
+
+    // Move the content of the active tab to the section below
+    var selectedTab = document.getElementById(tabName);
+    activeTabContent = document.getElementById("activeTabContent");
+    activeTabContent.innerHTML = selectedTab.innerHTML; // Copy content of active tab
   }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
 }
 
-// Default open the first tab
-//document.addEventListener("DOMContentLoaded", function () {
-//  document.querySelector(".tablinks").click();
-//});
-
-// Set default tab open
-document.getElementById("Charts").style.display = "block";
-document.querySelector(".tablinks").classList.add("active");
+// Set default tab open for desktop
+if (window.innerWidth >= 960) {
+  document.querySelector(".tablinks").classList.add("active");
+  var defaultTabContent = document.getElementById("Charts").innerHTML;
+  document.getElementById("activeTabContent").innerHTML = defaultTabContent; // Show default tab content
+}

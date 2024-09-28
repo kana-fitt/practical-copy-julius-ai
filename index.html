@@ -9,50 +9,56 @@
   <body>
     <h1>Dashboard</h1>
 
-    <!-- Tab links -->
+    <!-- Tab links and content -->
     <div class="tab">
       <button class="tablinks" onclick="openTab(event, 'Charts')">
         Charts & Graphs
       </button>
+      <div id="Charts" class="tabcontent">
+        <h2>Charts & Graphs</h2>
+        <p>Create sleek looking data visualizations.</p>
+      </div>
+
       <button class="tablinks" onclick="openTab(event, 'Insights')">
         Insights
       </button>
+      <div id="Insights" class="tabcontent">
+        <h2>Insights</h2>
+        <p>Ask anything to your data, and get answers.</p>
+      </div>
+
       <button class="tablinks" onclick="openTab(event, 'Advanced')">
         Advanced Analysis
       </button>
+      <div id="Advanced" class="tabcontent">
+        <h2>Advanced Analysis</h2>
+        <p>Perform modeling and predictive forecasting.</p>
+      </div>
+
       <button class="tablinks" onclick="openTab(event, 'ProblemSolving')">
         Problem Solving
       </button>
+      <div id="ProblemSolving" class="tabcontent">
+        <h2>Problem Solving</h2>
+        <p>Scan-and-solve math, physics, and chemistry.</p>
+      </div>
+
       <button class="tablinks" onclick="openTab(event, 'Reports')">
         Reports
       </button>
+      <div id="Reports" class="tabcontent">
+        <h2>Reports</h2>
+        <p>Generate polished analyses and summaries.</p>
+      </div>
     </div>
 
-    <!-- Tab content -->
-    <div id="Charts" class="tabcontent">
-      <h2>Charts & Graphs</h2>
-      <p>Create sleek looking data visualizations.</p>
-    </div>
-
-    <div id="Insights" class="tabcontent">
-      <h2>Insights</h2>
-      <p>Ask anything to your data, and get answers.</p>
-    </div>
-
-    <div id="Advanced" class="tabcontent">
-      <h2>Advanced Analysis</h2>
-      <p>Perform modeling and predictive forecasting.</p>
-    </div>
-
-    <div id="ProblemSolving" class="tabcontent">
-      <h2>Problem Solving</h2>
-      <p>Scan-and-solve math, physics, and chemistry.</p>
-    </div>
-
-    <div id="Reports" class="tabcontent">
-      <h2>Reports</h2>
-      <p>Generate polished analyses and summaries.</p>
-    </div>
+    <!-- Section to display active tab content -->
+    <section id="activeTabSection">
+      <h2>Active Tab Content</h2>
+      <div id="activeTabContent">
+        <!-- Active tab content will be shown here -->
+      </div>
+    </section>
 
     <script src="scripts.js"></script>
   </body>
