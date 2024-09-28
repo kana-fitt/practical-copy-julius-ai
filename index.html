@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Interface Example</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Charts')">
+        Charts & Graphs
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Insights')">
+        Insights
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Advanced')">
+        Advanced Analysis
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'ProblemSolving')">
+        Problem Solving
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'Reports')">
+        Reports
+      </button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Charts" class="tabcontent">
+      <h2>Charts & Graphs</h2>
+      <p>Create sleek looking data visualizations.</p>
+    </div>
+
+    <div id="Insights" class="tabcontent">
+      <h2>Insights</h2>
+      <p>Ask anything to your data, and get answers.</p>
+    </div>
+
+    <div id="Advanced" class="tabcontent">
+      <h2>Advanced Analysis</h2>
+      <p>Perform modeling and predictive forecasting.</p>
+    </div>
+
+    <div id="ProblemSolving" class="tabcontent">
+      <h2>Problem Solving</h2>
+      <p>Scan-and-solve math, physics, and chemistry.</p>
+    </div>
+
+    <div id="Reports" class="tabcontent">
+      <h2>Reports</h2>
+      <p>Generate polished analyses and summaries.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
