@@ -20,6 +20,10 @@ function openTab(evt, tabName) {
 }
 
 // Default open the first tab
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".tablinks").click();
-});
+//document.addEventListener("DOMContentLoaded", function () {
+//  document.querySelector(".tablinks").click();
+//});
+
+// Set default tab open
+document.getElementById("Charts").style.display = "block";
+document.querySelector(".tablinks").classList.add("active");

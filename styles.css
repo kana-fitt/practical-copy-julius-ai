@@ -1,4 +1,4 @@
-/* Style for screen widths larger than 960px */
+/* Style for Desktop (screen widths larger than or equal to 960px) */
 @media screen and (min-width: 960px) {
   .tab {
     display: flex;
@@ -12,11 +12,16 @@
   }
 
   .tabcontent {
+    display: none;
+    padding: 12px;
+  }
+
+  .tabcontent.active {
     display: block;
   }
 }
 
-/* Style for screen widths smaller than 960px */
+/* Style for Mobile (screen widths smaller than 960px) */
 @media screen and (max-width: 960px) {
   /* Stack the buttons vertically */
   .tab {
@@ -24,15 +29,22 @@
   }
 
   .tab button {
+    pointer-events: none;
     display: block;
     width: 100%;
     padding: 10px;
     font-size: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
   }
 
-  /* Make the tab content full width */
+  /* Display all tab content in sequence */
   .tabcontent {
+    display: block;
     padding: 12px;
     font-size: 14px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-bottom: 10px;
   }
 }
