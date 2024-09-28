@@ -1,3 +1,21 @@
+/* ใช้ฟอนต์ Montserrat ทั่วทั้งเว็บไซต์ */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* กำหนดฟอนต์เฉพาะส่วนต่าง ๆ */
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600; /* กำหนดน้ำหนักฟอนต์ เช่น 400 (ปกติ), 600 (ตัวหนา), หรือ 700 */
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* น้ำหนักฟอนต์ปกติ */
+}
+
 /* Style for Desktop (screen widths larger than or equal to 960px) */
 @media screen and (min-width: 960px) {
   .tab {
