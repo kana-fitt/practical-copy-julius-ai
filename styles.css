@@ -3,6 +3,142 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* จัดการให้ส่วนเมนูชิดซ้าย */
+.left-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left-menu ul {
+  list-style: none; /* ลบจุดหน้าเมนู */
+  padding: 0;
+  margin: 0;
+}
+
+.left-menu ul li a {
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none; /* ลบเส้นใต้ */
+  color: #333; /* กำหนดสีของลิงก์ตามความต้องการ */
+  font-weight: 500;
+}
+
+.left-menu ul li a:hover {
+  color: #1a73e8; /* เปลี่ยนสีเมื่อ hover */
+  text-decoration: none; /* ลบเส้นใต้ขณะ hover ด้วย */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #1a73e8; /* สีของโลโก้ Julius */
+}
+
+.right-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.nav ul li a:hover {
+  color: #1a73e8; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.signup {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.signup:hover {
+  background-color: #1665c1;
+}
+
+.login {
+  border: 1px solid #1a73e8;
+  color: #1a73e8;
+}
+
+.login:hover {
+  background-color: #1a73e8;
+  color: white;
+}
+
 /* กำหนดฟอนต์เฉพาะส่วนต่าง ๆ */
 h1,
 h2,
@@ -19,7 +155,7 @@ p {
 /* Style for Desktop (screen widths larger than or equal to 960px) */
 @media screen and (min-width: 960px) {
   .container {
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -99,6 +235,15 @@ p {
 
 /* Style for Mobile (screen widths smaller than 960px) */
 @media screen and (max-width: 960px) {
+  .docs {
+    display: none;
+  }
+  .community {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
   .features {
     grid-template-columns: 1fr; /* 1 คอลัมน์ */
   }

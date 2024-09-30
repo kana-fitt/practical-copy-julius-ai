@@ -1,3 +1,17 @@
+// Function to load the header content from external file
+function loadHeader() {
+  fetch("header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+}
+
+// Call the function when the page loads
+window.onload = function () {
+  loadHeader();
+};
+
 function openTab(evt, tabName) {
   if (window.innerWidth >= 960) {
     // Allow tab switching only for screens wider than 960px
