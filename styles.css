@@ -18,6 +18,48 @@ p {
 
 /* Style for Desktop (screen widths larger than or equal to 960px) */
 @media screen and (min-width: 960px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 คอลัมน์ */
+    gap: 20px;
+  }
+
+  .feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: scale(1.05);
+  }
+
+  .feature-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .feature-description {
+    font-size: 14px;
+    color: #555;
+  }
+
   .tab {
     display: flex;
     justify-content: space-around;
@@ -40,10 +82,26 @@ p {
     padding: 10px;
     border: 1px solid #ccc;
   }
+
+  .faq-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* แสดงผลเป็น 3 คอลัมน์ */
+    gap: 20px;
+  }
+
+  .faq-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Style for Mobile (screen widths smaller than 960px) */
 @media screen and (max-width: 960px) {
+  .features {
+    grid-template-columns: 1fr; /* 1 คอลัมน์ */
+  }
   .tab {
     display: block;
   }
@@ -71,5 +129,9 @@ p {
   /* Hide the new section for mobile */
   #activeTabSection {
     display: none;
+  }
+
+  .faq-section {
+    grid-template-columns: 1fr; /* แสดงผลเป็น 1 คอลัมน์ */
   }
 }

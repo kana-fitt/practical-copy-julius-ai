@@ -12,59 +12,157 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Dashboard</h1>
+    <div class="container">
+      <h1>Dashboard</h1>
+      <h2>Save time. Make Julius do your data work.</h2>
+      <p>Turn hours of Excel into minutes on Julius.</p>
 
-    <!-- Tab links and content -->
-    <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'Charts')">
-        Charts & Graphs
-      </button>
-      <div id="Charts" class="tabcontent">
-        <h2>Charts & Graphs</h2>
-        <p>Create sleek looking data visueealizations.</p>
+      <!-- Tab links and content -->
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Charts')">
+          Charts & Graphs
+        </button>
+        <div id="Charts" class="tabcontent">
+          <h2>Charts & Graphs</h2>
+          <p>Create sleek looking data visueealizations.</p>
+        </div>
+
+        <button class="tablinks" onclick="openTab(event, 'Insights')">
+          การวิเคราะห์
+        </button>
+        <div id="Insights" class="tabcontent">
+          <h2>การวิเคราะห์</h2>
+          <p>Ask anything to your data, and get answers.</p>
+        </div>
+
+        <button class="tablinks" onclick="openTab(event, 'Advanced')">
+          Advanced Analysis
+        </button>
+        <div id="Advanced" class="tabcontent">
+          <h2>Advanced Analysis</h2>
+          <p>Perform modeling and predictive forecasting.</p>
+        </div>
+
+        <button class="tablinks" onclick="openTab(event, 'ProblemSolving')">
+          Problem Solving
+        </button>
+        <div id="ProblemSolving" class="tabcontent">
+          <h2>Problem Solving</h2>
+          <p>Scan-and-solve math, physics, and chemistry.</p>
+        </div>
+
+        <button class="tablinks" onclick="openTab(event, 'Reports')">
+          Reports
+        </button>
+        <div id="Reports" class="tabcontent">
+          <h2>Reports</h2>
+          <p>Generate polished analyses and summaries.</p>
+        </div>
       </div>
 
-      <button class="tablinks" onclick="openTab(event, 'Insights')">
-        การวิเคราะห์
-      </button>
-      <div id="Insights" class="tabcontent">
-        <h2>การวิเคราะห์</h2>
-        <p>Ask anything to your data, and get answers.</p>
+      <!-- Section to display active tab content -->
+      <section id="activeTabSection">
+        <h2>Active Tab Content</h2>
+        <div id="activeTabContent">
+          <!-- Active tab content will be shown here -->
+        </div>
+      </section>
+
+      <div class="features-section">
+        <div class="feature-card">
+          <img src="icon1.png" alt="Visualizations Icon" />
+          <div class="feature-title">Generate sleek visualizations</div>
+          <div class="feature-description">
+            Communicate findings with confidence.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="icon2.png" alt="Questions Icon" />
+          <div class="feature-title">Ask data questions</div>
+          <div class="feature-description">
+            Get answers to your queries in seconds.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="icon3.png" alt="Cleaning Icon" />
+          <div class="feature-title">Cleaning made effortless</div>
+          <div class="feature-description">
+            Automate data prep and focus on what matters.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="icon4.png" alt="Export Icon" />
+          <div class="feature-title">Export instantly</div>
+          <div class="feature-description">
+            Quickly download data into CSV or Excel for easy sharing.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="icon5.png" alt="Animation Icon" />
+          <div class="feature-title">Create captivating animations</div>
+          <div class="feature-description">
+            Bring data to life with dynamic GIFs.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="icon6.png" alt="Modeling Icon" />
+          <div class="feature-title">Unlock statistical modeling</div>
+          <div class="feature-description">
+            Get expert-level insights without the complexity.
+          </div>
+        </div>
       </div>
 
-      <button class="tablinks" onclick="openTab(event, 'Advanced')">
-        Advanced Analysis
-      </button>
-      <div id="Advanced" class="tabcontent">
-        <h2>Advanced Analysis</h2>
-        <p>Perform modeling and predictive forecasting.</p>
-      </div>
-
-      <button class="tablinks" onclick="openTab(event, 'ProblemSolving')">
-        Problem Solving
-      </button>
-      <div id="ProblemSolving" class="tabcontent">
-        <h2>Problem Solving</h2>
-        <p>Scan-and-solve math, physics, and chemistry.</p>
-      </div>
-
-      <button class="tablinks" onclick="openTab(event, 'Reports')">
-        Reports
-      </button>
-      <div id="Reports" class="tabcontent">
-        <h2>Reports</h2>
-        <p>Generate polished analyses and summaries.</p>
+      <div class="faq-section">
+        <div class="faq-item">
+          <h3>How do I link a data source?</h3>
+          <p>
+            You can link a data source on the Files page or directly in our Chat
+            interface...
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I analyze spreadsheets with multiple tabs?</h3>
+          <p>
+            Yes! Upload your multi-tab spreadsheet as you would any other
+            file...
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>What is Julius' data privacy policy?</h3>
+          <p>
+            We utilize strict access-control, as each user only has access to
+            their own data...
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>What do I do after linking a data source?</h3>
+          <p>
+            After linking a data source, you can analyze it with natural
+            language prompting on the Chat page...
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I generate data visualizations?</h3>
+          <p>
+            Yes, it's very easy to generate clean-looking data visualizations
+            using Julius...
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this free?</h3>
+          <p>
+            Yes! By default all users can send up to 15 messages a month with
+            our most advanced AI model...
+          </p>
+        </div>
       </div>
     </div>
-
-    <!-- Section to display active tab content -->
-    <section id="activeTabSection">
-      <h2>Active Tab Content</h2>
-      <div id="activeTabContent">
-        <!-- Active tab content will be shown here -->
-      </div>
-    </section>
-
     <script src="scripts.js"></script>
   </body>
 </html>

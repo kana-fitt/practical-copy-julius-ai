@@ -1,0 +1,41 @@
+[33mcommit c363c28d76992f2805d3df68b65e661d031c3658[m[33m ([m[1;36mHEAD -> [m[1;32mpost960px[m[33m, [m[1;31morigin/post960px[m[33m)[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 08:14:38 2024 +0000
+
+    empty commit
+
+[33mcommit e42f2ebcd84681d822c037069accafbfecef8147[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 08:08:10 2024 +0000
+
+    change font to monserrat
+
+[33mcommit a206bb5d40db12acf69432e65850f2d1540042a4[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 07:33:07 2024 +0000
+
+    complete tab desktop+mobile
+
+[33mcommit 46c7fd6fa404e56b1f3cc2152a4cc9060ab3dc95[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 07:18:52 2024 +0000
+
+    mobile : tab click disable
+
+[33mcommit acc0642b7cb66fe61597dbdbd313939e104abd03[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 06:58:50 2024 +0000
+
+    split960px
+
+[33mcommit 901cc663caf55c323d13c9c1583483275bbcefde[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 13:54:48 2024 +0700
+
+    Initial commit
+
+[33mcommit 473ef758aea3b6d0ce4244ee0a355ec981f7dc3b[m
+Author: kana-fitt <34881142+kana-fitt@users.noreply.github.com>
+Date:   Sat Sep 28 13:54:44 2024 +0700
+
+    Initial commit
