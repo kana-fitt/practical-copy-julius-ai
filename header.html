@@ -3,19 +3,56 @@
   <div class="left-menu">
     <ul>
       <li class="dropdown">
-        <a href="#" class="dropbtn">Use Cases</a>
-        <div class="dropdown-content">
-          <a href="#">Exploratory Data Analysis</a>
-          <a href="#">One-way ANOVA</a>
-          <a href="#">Descriptive Statistics</a>
-          <a href="#">Correlation Analysis</a>
+        <button onclick="toggleDropdown()" class="dropbtn">
+          เลือกประเภทธุรกิจ +
+        </button>
+        <div id="dropdownContent" class="dropdown-content">
+          <!-- Header inside dropdown -->
+          <div class="dropdown-header">
+            <h3>Use Cases</h3>
+            <p>Learn how Julius AI can help you navigate your data</p>
+          </div>
+
+          <!-- Links inside dropdown -->
+          <a href="#">
+            <span class="icon">&#127828;</span>
+            <!-- Icon ตัวอย่าง (search) -->
+            <div class="text">
+              <strong>ร้านอาหาร</strong>
+              <small>รองรับการทานที่รัาน และสั่ง Online</small>
+            </div>
+          </a>
+          <a href="#">
+            <span class="icon">&#127976;</span>
+            <!-- Icon ตัวอย่าง (graph) -->
+            <div class="text">
+              <strong>One-way ANOVA</strong>
+              <small>Nutrition Science</small>
+            </div>
+          </a>
+          <a href="#">
+            <span class="icon">&#128200;</span>
+            <!-- Icon ตัวอย่าง (bar graph) -->
+            <div class="text">
+              <strong>Descriptive Statistics</strong>
+              <small>Demographics</small>
+            </div>
+          </a>
+          <a href="#">
+            <span class="icon">&#128201;</span>
+            <!-- Icon ตัวอย่าง (scatter plot) -->
+            <div class="text">
+              <strong>Correlation Analysis</strong>
+              <small>Bioinformatics</small>
+            </div>
+          </a>
         </div>
       </li>
     </ul>
   </div>
 
   <div class="logo">
-    <h1>Julius</h1>
+    <h1>E-Tax to ME</h1>
   </div>
 
   <!-- Navigation Links -->

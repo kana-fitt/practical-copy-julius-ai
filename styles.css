@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #b22d2d; /* สีหลัก (Primary) */
+  --secondary-color: #6f0000; /* สีรอง (Secondary) เมื่อ hover ให้ใช้สีรอง*/
+  --accent-color: #fbbc05; /* สีเน้น (Accent) ใช้สีเน้นสำหรับปุ่ม*/
+  --neutral-color: #e0e0e0; /* สีพื้นฐาน (Neutral) ใช้สีพื้นฐานเป็นพื้นหลัง */
+  --danger-color: #ea4335; /* สีแจ้งเตือน/ข้อผิดพลาด (Danger) ใช้สีแจ้งเตือนสำหรับข้อความผิดพลาด*/
+}
+
 /* ใช้ฟอนต์ Montserrat ทั่วทั้งเว็บไซต์ */
 body {
   font-family: "Montserrat", sans-serif;
@@ -7,9 +15,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  background-color: white;
+  /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
   position: relative;
 }
 
@@ -37,16 +45,102 @@ body {
 }
 
 .left-menu ul li a:hover {
-  color: #1a73e8; /* เปลี่ยนสีเมื่อ hover */
+  color: white; /* เปลี่ยนสีเมื่อ hover */
   text-decoration: none; /* ลบเส้นใต้ขณะ hover ด้วย */
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: whitesmoke;
+  color: black;
+  padding: 10px 5px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown header styling */
+.dropdown-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.dropdown-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dropdown-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.dropdown-content {
+  color: black;
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 320px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Icon and text styling */
+.icon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text strong {
+  font-size: 16px;
+}
+
+.text small {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Toggle dropdown content visibility */
+.show {
+  display: block;
 }
 
 .logo {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  color: #1a73e8; /* สีของโลโก้ Julius */
+  color: var(--primary-color);
+  font-weight: 500; /* หรือใช้ค่า 700 */
+  letter-spacing: -2px; /* ลดระยะห่างระหว่างตัวอักษร */
 }
 
 .right-menu {
@@ -54,6 +148,39 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.signup {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.signup:hover {
+  background-color: var(--secondary-color);
+}
+
+.login {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.login:hover {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .nav ul {
@@ -71,13 +198,13 @@ body {
 .nav ul li a {
   text-decoration: none;
   font-size: 16px;
-  color: #333;
+  color: black;
   font-weight: 500;
   padding: 10px;
 }
 
 .nav ul li a:hover {
-  color: #1a73e8; /* เปลี่ยนสีเมื่อ hover */
+  color: white; /* เปลี่ยนสีเมื่อ hover */
 }
 
 /* carousel */
@@ -92,8 +219,8 @@ body {
 
 .carousel {
   display: flex;
-  width: 1520px;
-  animation: scroll-left 25s linear infinite;
+  width: 1330px;
+  animation: scroll-left 40s linear infinite;
 }
 
 .carousel img {
@@ -101,65 +228,6 @@ body {
   height: 150px;
   margin: 0 20px;
   border-radius: 50%;
-}
-
-/* Dropdown Styles */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.signup {
-  background-color: #1a73e8;
-  color: white;
-}
-
-.signup:hover {
-  background-color: #1665c1;
-}
-
-.login {
-  border: 1px solid #1a73e8;
-  color: #1a73e8;
-}
-
-.login:hover {
-  background-color: #1a73e8;
-  color: white;
 }
 
 /* Footer Section */
@@ -272,6 +340,12 @@ p {
 
 /* Style for Desktop (screen widths larger than or equal to 960px) */
 @media screen and (min-width: 960px) {
+  .logo {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+  }
+
   .container {
     max-width: 960px;
     margin: 0 auto;
@@ -353,6 +427,14 @@ p {
 
 /* Style for Mobile (screen widths smaller than 960px) */
 @media screen and (max-width: 960px) {
+  .dropbtn {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .logo {
+    right: 0; /* ชิดขวา */
+    font-size: 18px;
+  }
   .docs {
     display: none;
   }
@@ -360,6 +442,9 @@ p {
     display: none;
   }
   .login {
+    display: none;
+  }
+  .signup {
     display: none;
   }
   .features {

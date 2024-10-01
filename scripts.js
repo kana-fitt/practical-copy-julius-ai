@@ -15,10 +15,18 @@ function loadFooter() {
     });
 }
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0, // เลื่อนไปที่ด้านบนสุดของหน้าเพจ
+    behavior: "smooth", // ให้การเลื่อนเป็นไปอย่างนุ่มนวล
+  });
+}
+
 // Call the function when the page loads
 window.onload = function () {
   loadHeader();
   loadFooter();
+  scrollToTop();
 };
 
 function openTab(evt, tabName) {
@@ -54,3 +62,21 @@ if (window.innerWidth >= 960) {
   var defaultTabContent = document.getElementById("Charts").innerHTML;
   document.getElementById("activeTabContent").innerHTML = defaultTabContent; // Show default tab content
 }
+
+// Function to toggle the dropdown
+function toggleDropdown() {
+  document.getElementById("dropdownContent").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};
