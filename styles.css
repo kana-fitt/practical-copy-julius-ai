@@ -80,6 +80,29 @@ body {
   color: #1a73e8; /* เปลี่ยนสีเมื่อ hover */
 }
 
+/* carousel */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.carousel {
+  display: flex;
+  width: 1520px;
+  animation: scroll-left 25s linear infinite;
+}
+
+.carousel img {
+  width: 150px;
+  height: 150px;
+  margin: 0 20px;
+  border-radius: 50%;
+}
+
 /* Dropdown Styles */
 .dropdown-content {
   display: none;
@@ -137,6 +160,101 @@ body {
 .login:hover {
   background-color: #1a73e8;
   color: white;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 15px;
+  min-width: 150px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  }
 }
 
 /* กำหนดฟอนต์เฉพาะส่วนต่าง ๆ */
@@ -278,5 +396,14 @@ p {
 
   .faq-section {
     grid-template-columns: 1fr; /* แสดงผลเป็น 1 คอลัมน์ */
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

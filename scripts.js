@@ -7,9 +7,18 @@ function loadHeader() {
     });
 }
 
+function loadFooter() {
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+}
+
 // Call the function when the page loads
 window.onload = function () {
   loadHeader();
+  loadFooter();
 };
 
 function openTab(evt, tabName) {
