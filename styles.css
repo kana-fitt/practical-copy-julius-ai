@@ -310,43 +310,53 @@ body {
 }
 
 .tab {
+  display: flex;
+  justify-content: space-around;
   gap: 40px;
-  background-color: white;
 }
 
-.tablinks {
-  display: flex;
-  justify-content: center;
-  background-color: grey;
-  border-style: none;
-  border-radius: 0px;
-  padding: 0px;
+.tab button {
+  flex: 1;
   width: 160px;
-  text-align: center;
+  height: 160px;
+  padding: 14px 16px;
+  font-size: 17px;
+  border-radius: 5px;
+  background-color: var(--mono-color-8);
+  border-style: solid;
+  border-color: var(--mono-color-7);
 }
-.tablinks:hover {
-  background-color: #e0e7ff;
-}
-.tablinks-icon {
-  font-size: 40px;
-  margin-bottom: 10px;
+
+.tab-icon {
+  font-size: 30px;
+  margin-bottom: 5px;
   color: #0056d2;
 }
-.tablinks h3 {
-  font-size: 18px;
+.tab h3 {
+  font-size: 14px;
   margin-bottom: 10px;
   color: #000;
 }
-.tablinks p {
-  font-size: 14px;
+.tab p {
+  font-size: 12px;
   color: #666;
   margin-bottom: 15px;
 }
-.tablinks a {
+.tab a {
   text-decoration: none;
   font-size: 14px;
   color: #1a73e8;
   font-weight: bold;
+}
+
+.tabcontent {
+  display: none;
+}
+
+#activeTabSection {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
 /* Footer Section */
@@ -501,27 +511,6 @@ p {
   .feature-description {
     font-size: 14px;
     color: #555;
-  }
-
-  .tab {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .tab button {
-    flex: 1;
-    padding: 14px 16px;
-    font-size: 17px;
-  }
-
-  .tabcontent {
-    display: none;
-  }
-
-  #activeTabSection {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
   }
 
   .faq-section {
