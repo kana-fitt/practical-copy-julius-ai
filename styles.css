@@ -330,7 +330,7 @@ body {
 .tab-icon {
   font-size: 30px;
   margin-bottom: 5px;
-  color: #0056d2;
+  color: var(--primary-color);
 }
 .tab h3 {
   font-size: 14px;
