@@ -4,11 +4,25 @@
   --accent-color: #fbbc05; /* สีเน้น (Accent) ใช้สีเน้นสำหรับปุ่ม*/
   --neutral-color: #e0e0e0; /* สีพื้นฐาน (Neutral) ใช้สีพื้นฐานเป็นพื้นหลัง */
   --danger-color: #ea4335; /* สีแจ้งเตือน/ข้อผิดพลาด (Danger) ใช้สีแจ้งเตือนสำหรับข้อความผิดพลาด*/
+  --mono-color-1: #333333; /* สีดำเข้ม/H1 H2 H3*/
+  --mono-color-2: #4d4d4d; /* สีเทา*/
+  --mono-color-3: gray; /* สีเทา*/
+  --mono-color-4: darkgrey; /* สีเทา*/
+  --mono-color-5: silver; /* สีเทา*/
+  --mono-color-6: lightgrey; /* สีขาว*/
+  --mono-color-7: gainsboro; /* สีขาว*/
+  --mono-color-8: whitesmoke; /* สีขาว*/
+  --mono-color-9: white; /* สีขาว*/
 }
 
-/* ใช้ฟอนต์ Montserrat ทั่วทั้งเว็บไซต์ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Montserrat", sans-serif;
+  color: var(--mono-color-1);
 }
 
 .header {
@@ -26,6 +40,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: flex-start;
+  margin: 0px 10px;
 }
 
 .left-menu ul {
@@ -63,6 +78,7 @@ body {
   font-weight: 500;
   border: none;
   cursor: pointer;
+  width: 180px;
 }
 
 /* Dropdown header styling */
@@ -111,7 +127,6 @@ body {
   border-radius: 5px;
 }
 
-/* Icon and text styling */
 .icon {
   font-size: 24px;
   margin-right: 15px;
@@ -131,28 +146,67 @@ body {
   font-size: 12px;
 }
 
-/* Toggle dropdown content visibility */
 .show {
   display: block;
 }
 
-.logo {
-  position: absolute;
-  color: var(--primary-color);
-  font-weight: 500; /* หรือใช้ค่า 700 */
-  letter-spacing: -2px; /* ลดระยะห่างระหว่างตัวอักษร */
-}
-
 .right-menu {
-  flex: 1;
+  flex: 2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin: 0px 10px;
+}
+
+.logo {
+  color: var(--primary-color);
+  font-weight: 700; /* หรือใช้ค่า 700 */
+  letter-spacing: -2px; /* ลดระยะห่างระหว่างตัวอักษร */
+  font-size: 32px;
+  margin-right: 110px;
+  text-decoration: none;
+}
+
+.logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.right-nav {
+  list-style: none;
+  margin: 10px 50px;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.right-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.right-nav ul li {
+  position: relative;
+}
+
+.right-nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.right-nav ul li a:hover {
+  color: var(--primary-color); /* เปลี่ยนสีเมื่อ hover */
 }
 
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .btn {
@@ -162,6 +216,8 @@ body {
   font-size: 14px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  width: 110px; /* กำหนดความกว้างของปุ่มให้คงที่ */
+  text-align: center; /* จัดข้อความให้ตรงกลางในปุ่ม */
 }
 
 .signup {
@@ -183,51 +239,114 @@ body {
   color: white;
 }
 
-.nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.container {
   display: flex;
-  gap: 20px;
+  flex-direction: column; /* จัดเรียงในแนวตั้ง */
+  justify-content: center; /* จัดกลางในแนวนอน */
+  align-items: center; /* จัดกลางในแนวตั้ง */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
 }
 
-.nav ul li {
-  position: relative;
+.hero1 {
+  margin-top: 25px;
+  margin-bottom: 0px;
 }
 
-.nav ul li a {
-  text-decoration: none;
+.hero2 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.btn-calltoaction {
+  background-color: var(--primary-color);
+  color: white;
+  width: 300px;
+  justify-content: center;
+  padding: 15px 30px;
+  border-radius: 50px; /* ทำให้ปุ่มมีขอบโค้ง */
   font-size: 16px;
-  color: black;
-  font-weight: 500;
-  padding: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.nav ul li a:hover {
-  color: white; /* เปลี่ยนสีเมื่อ hover */
+.btn-calltoaction:hover {
+  background-color: var(--secondary-color); /* เปลี่ยนสีเมื่อ hover */
+}
+
+.btn-calltoaction span {
+  margin-left: 10px; /* ระยะห่างระหว่างข้อความกับไอคอน */
+  font-size: 20px;
 }
 
 /* carousel */
 .carousel-container {
-  width: 100%;
+  width: 70%;
   overflow: hidden;
   background-color: #fff;
   padding: 20px;
   display: flex;
   justify-content: left;
+  margin: 0px 0px;
 }
 
 .carousel {
   display: flex;
-  width: 1330px;
+  width: 980px;
+  margin: 0px 0px;
   animation: scroll-left 40s linear infinite;
 }
 
 .carousel img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 75px;
   margin: 0 20px;
   border-radius: 50%;
+}
+
+.tab {
+  gap: 40px;
+  background-color: white;
+}
+
+.tablinks {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+  border-style: none;
+  border-radius: 0px;
+  padding: 0px;
+  width: 160px;
+  text-align: center;
+}
+.tablinks:hover {
+  background-color: #e0e7ff;
+}
+.tablinks-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #0056d2;
+}
+.tablinks h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.tablinks p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.tablinks a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #1a73e8;
+  font-weight: bold;
 }
 
 /* Footer Section */
@@ -314,38 +433,34 @@ body {
   color: #999;
 }
 
-/* Responsive Layout */
-@media screen and (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-
-  .footer-column {
-    margin-bottom: 30px;
-  }
+h1 {
+  font-size: 48px; /*36-48 (สำหรับหัวข้อใหญ่ที่สุด เช่น ชื่อหน้าเว็บ)*/
+  font-weight: 900;
 }
-
-/* กำหนดฟอนต์เฉพาะส่วนต่าง ๆ */
-h1,
-h2,
+h2 {
+  font-size: 36px; /*30-36 (สำหรับหัวข้อหลักในหน้า)*/
+}
 h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600; /* กำหนดน้ำหนักฟอนต์ เช่น 400 (ปกติ), 600 (ตัวหนา), หรือ 700 */
+  font-size: 30px; /*24-30 (สำหรับหัวข้อรอง)*/
+}
+h4 {
+  font-size: 24px; /*20-24 (สำหรับหัวข้อย่อย)*/
+  font-weight: 500;
+}
+h5 {
+  font-size: 20px; /*18-20 (สำหรับหัวข้อเล็ก) */
+  font-weight: 500;
+}
+h6 {
+  font-size: 18px; /*16-18 (สำหรับหัวข้อเล็กที่สุด)*/
 }
 
 p {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400; /* น้ำหนักฟอนต์ปกติ */
 }
 
-/* Style for Desktop (screen widths larger than or equal to 960px) */
 @media screen and (min-width: 960px) {
-  .logo {
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 18px;
-  }
-
+  /* Desktop Style (screen widths larger than or equal to 960px) */
   .container {
     max-width: 960px;
     margin: 0 auto;
@@ -399,12 +514,10 @@ p {
     font-size: 17px;
   }
 
-  /* Hide the original tabcontent in the tab area */
   .tabcontent {
     display: none;
   }
 
-  /* New Section style */
   #activeTabSection {
     margin-top: 20px;
     padding: 10px;
@@ -425,20 +538,42 @@ p {
   }
 }
 
-/* Style for Mobile (screen widths smaller than 960px) */
+/* Mobile Style (screen widths smaller than 960px) */
 @media screen and (max-width: 960px) {
+  h1 {
+    font-size: 24px; /*24-30*/
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 20px; /*20-24*/
+  }
+  h3 {
+    font-size: 18px; /*18-20*/
+  }
+  h4 {
+    font-size: 16px; /*16-18*/
+  }
+  h5 {
+    font-size: 14px; /*14-16*/
+    font-weight: 500;
+  }
+  h6 {
+    font-size: 12px; /*12-14*/
+  }
+  h7 {
+    font-size: 8px; /*12-14*/
+    color: var(--mono-color-8);
+  }
   .dropbtn {
     font-size: 14px;
     font-weight: 700;
   }
   .logo {
-    right: 0; /* ชิดขวา */
-    font-size: 18px;
+    margin: 0px 0px; /* ชิดขวา */
+    right: 0;
+    font-size: 24px;
   }
-  .docs {
-    display: none;
-  }
-  .community {
+  .right-nav {
     display: none;
   }
   .login {
@@ -447,6 +582,7 @@ p {
   .signup {
     display: none;
   }
+
   .features {
     grid-template-columns: 1fr; /* 1 คอลัมน์ */
   }
@@ -454,7 +590,6 @@ p {
     display: block;
   }
 
-  /* Stack the buttons vertically */
   .tab button {
     display: block;
     width: 100%;
@@ -464,7 +599,6 @@ p {
     border-bottom: 1px solid #ccc;
   }
 
-  /* Show tab content after each tab button */
   .tabcontent {
     display: block;
     padding: 12px;
