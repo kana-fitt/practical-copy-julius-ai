@@ -3,7 +3,7 @@
   --secondary-color: #6f0000; /* สีรอง (Secondary) เมื่อ hover ให้ใช้สีรอง*/
   --accent-color: #fbbc05; /* สีเน้น (Accent) ใช้สีเน้นสำหรับปุ่ม*/
   --neutral-color: #e0e0e0; /* สีพื้นฐาน (Neutral) ใช้สีพื้นฐานเป็นพื้นหลัง */
-  --danger-color: #ea4335; /* สีแจ้งเตือน/ข้อผิดพลาด (Danger) ใช้สีแจ้งเตือนสำหรับข้อความผิดพลาด*/
+  --buttonhover-color: #ea4335; /* สีแจ้งเตือน/ข้อผิดพลาด (Danger) ใช้สีแจ้งเตือนสำหรับข้อความผิดพลาด*/
   --mono-color-1: #333333; /* สีดำเข้ม/H1 H2 H3*/
   --mono-color-2: #4d4d4d; /* สีเทา*/
   --mono-color-3: gray; /* สีเทา*/
@@ -226,7 +226,7 @@ body {
 }
 
 .signup:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--buttonhover-color);
 }
 
 .login {
@@ -235,16 +235,19 @@ body {
 }
 
 .login:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--buttonhover-color);
   color: white;
 }
 
-.container {
+.container1 {
   display: flex;
   flex-direction: column; /* จัดเรียงในแนวตั้ง */
   justify-content: center; /* จัดกลางในแนวนอน */
   align-items: center; /* จัดกลางในแนวตั้ง */
   text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .hero1 {
@@ -276,7 +279,7 @@ body {
 }
 
 .btn-calltoaction:hover {
-  background-color: var(--secondary-color); /* เปลี่ยนสีเมื่อ hover */
+  background-color: var(--buttonhover-color); /* เปลี่ยนสีเมื่อ hover */
 }
 
 .btn-calltoaction span {
@@ -372,6 +375,79 @@ body {
   margin-bottom: 40px;
   padding: 10px;
   border: 1px solid var(--mono-color-7);
+}
+
+.partner-section {
+  width: 960px;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 คอลัมน์ */
+  gap: 20px;
+}
+
+.feature-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+}
+
+.feature-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.container2 {
+  display: flex;
+  background-color: var(--mono-color-8);
+  justify-content: center; /* จัดกลางในแนวนอน */
+  align-items: center; /* จัดกลางในแนวตั้ง */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column; /* จัดเรียงในแนวตั้ง */
+  justify-content: center; /* จัดกลางในแนวนอน */
+  align-items: center; /* จัดกลางในแนวตั้ง */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faq-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* แสดงผลเป็น 3 คอลัมน์ */
+  gap: 20px;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer Section */
@@ -482,64 +558,6 @@ h6 {
 
 p {
   font-weight: 400; /* น้ำหนักฟอนต์ปกติ */
-}
-
-@media screen and (min-width: 960px) {
-  /* Desktop Style (screen widths larger than or equal to 960px) */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default: 3 คอลัมน์ */
-    gap: 20px;
-  }
-
-  .feature-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .feature-card:hover {
-    transform: scale(1.05);
-  }
-
-  .feature-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-  }
-
-  .feature-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .feature-description {
-    font-size: 14px;
-    color: #555;
-  }
-
-  .faq-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* แสดงผลเป็น 3 คอลัมน์ */
-    gap: 20px;
-  }
-
-  .faq-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
 }
 
 /* Mobile Style (screen widths smaller than 960px) */
