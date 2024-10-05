@@ -22,7 +22,7 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
-  color: var(--mono-color-1);
+  color: var(--mono-color-2);
 }
 
 .header {
@@ -323,16 +323,28 @@ body {
   font-size: 17px;
   border-radius: 5px;
   background-color: var(--mono-color-8);
-  border-style: solid;
-  border-color: var(--mono-color-7);
+  border: 0px solid var(--mono-color-8);
+  position: relative; /* เพื่อให้ตำแหน่งลูกภายในควบคุมได้ */
+}
+
+.tab button.active {
+  background-color: white;
+  border: 1px solid var(--primary-color);
 }
 
 .tab-icon {
-  font-size: 30px;
+  font-size: 18px;
   margin-bottom: 5px;
-  color: var(--primary-color);
+  color: white;
+  background-color: var(--primary-color);
+  padding: 5px; /* เพิ่มระยะห่างภายในกรอบ */
+  border-radius: 5px; /* ขอบมนสำหรับกรอบ */
+  display: inline-block; /* เพื่อให้สามารถควบคุมขนาดกรอบรอบไอคอนได้ */
+  position: absolute;
+  top: 10px; /* ระยะห่างจากด้านบน */
+  left: 10px; /* ระยะห่างจากด้านซ้าย */
 }
-.tab h3 {
+.tab caption {
   font-size: 14px;
   margin-bottom: 10px;
   color: #000;
@@ -354,9 +366,12 @@ body {
 }
 
 #activeTabSection {
+  width: 960px;
+  height: 620px;
   margin-top: 20px;
+  margin-bottom: 40px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--mono-color-7);
 }
 
 /* Footer Section */
@@ -592,7 +607,7 @@ p {
     display: block;
     padding: 12px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 0px solid #ccc;
     border-top: none;
     margin-bottom: 10px;
   }
